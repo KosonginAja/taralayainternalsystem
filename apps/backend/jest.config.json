@@ -1,0 +1,10 @@
+{
+  "preset": "ts-jest",
+  "testEnvironment": "node",
+  "roots": ["<rootDir>/src/__tests__"],
+  "testMatch": ["**/*.test.ts"],
+  "moduleNameMapper": {
+    "^@taralaya/shared$": "<rootDir>/../../packages/shared/src/index.ts",
+    "^@taralaya/db$": "<rootDir>/../../packages/db/src/index.ts"
+  }
+}
