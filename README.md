@@ -8,20 +8,20 @@ ERP / Operating System for Taralaya Studio (Digital Agency).
 
 ## Fitur (12 Phase)
 
-| # | Fitur |
-|---|-------|
-| 1 | Foundation — Auth (JWT), Settings perusahaan |
-| 2 | Pricelist satuan & Paket layanan |
-| 3 | Quotation (penawaran) + PDF |
-| 4 | Invoice (faktur) + PDF |
-| 5 | Payment & Wallet / Kas |
-| 6 | UI Polish |
-| 7 | Project Management (Kanban) |
-| 8 | Team & Payroll |
-| 9 | Expense Tracking |
-| 10 | CRM / Lead Pipeline |
-| 11 | Reporting Dashboard |
-| 12 | Document Generator (Kontrak, BAST, dll) |
+| #   | Fitur                                        |
+| --- | -------------------------------------------- |
+| 1   | Foundation — Auth (JWT), Settings perusahaan |
+| 2   | Pricelist satuan & Paket layanan             |
+| 3   | Quotation (penawaran) + PDF                  |
+| 4   | Invoice (faktur) + PDF                       |
+| 5   | Payment & Wallet / Kas                       |
+| 6   | UI Polish                                    |
+| 7   | Project Management (Kanban)                  |
+| 8   | Team & Payroll                               |
+| 9   | Expense Tracking                             |
+| 10  | CRM / Lead Pipeline                          |
+| 11  | Reporting Dashboard                          |
+| 12  | Document Generator (Kontrak, BAST, dll)      |
 
 ---
 
@@ -46,6 +46,7 @@ taralaya-internal/
 ## Development Lokal
 
 ### Prasyarat
+
 - Node.js >= 18
 - pnpm >= 8 (`npm install -g pnpm`)
 - Akun [Neon](https://neon.tech) (free tier cukup)
@@ -96,15 +97,15 @@ Pastikan repo sudah di GitHub.
 
 Pergi ke `Settings → Environment Variables`, tambahkan:
 
-| Key | Value |
-|-----|-------|
-| `DATABASE_URL` | `postgresql://user:pass@ep-xxx.neon.tech/dbname?sslmode=require` |
-| `JWT_SECRET` | string random panjang (min 32 karakter) |
-| `ADMIN_EMAIL` | email admin pertama |
-| `ADMIN_PASSWORD` | password admin pertama |
-| `CLIENT_ORIGIN` | URL frontend Vercel kamu (isi setelah frontend di-deploy) |
-| `NODE_ENV` | `production` |
-| `VERCEL` | `1` |
+| Key              | Value                                                            |
+| ---------------- | ---------------------------------------------------------------- |
+| `DATABASE_URL`   | `postgresql://user:pass@ep-xxx.neon.tech/dbname?sslmode=require` |
+| `JWT_SECRET`     | string random panjang (min 32 karakter)                          |
+| `ADMIN_EMAIL`    | email admin pertama                                              |
+| `ADMIN_PASSWORD` | password admin pertama                                           |
+| `CLIENT_ORIGIN`  | URL frontend Vercel kamu (isi setelah frontend di-deploy)        |
+| `NODE_ENV`       | `production`                                                     |
+| `VERCEL`         | `1`                                                              |
 
 **4. Deploy**
 
@@ -125,8 +126,8 @@ Klik Deploy. Catat URL backend kamu, contoh: `https://taralaya-backend.vercel.ap
 
 **2. Set Environment Variables di Frontend Project**
 
-| Key | Value |
-|-----|-------|
+| Key            | Value                                                                     |
+| -------------- | ------------------------------------------------------------------------- |
 | `VITE_API_URL` | URL backend dari langkah A, contoh: `https://taralaya-backend.vercel.app` |
 
 **3. Deploy**
@@ -174,16 +175,20 @@ pnpm --filter @taralaya/backend exec tsx src/db/migrate-team.ts
 ## Troubleshooting Vercel
 
 ### `FUNCTION_INVOCATION_FAILED` / 500 Error
+
 Cek **Vercel → Functions → Runtime Logs**. Penyebab paling umum:
+
 - `DATABASE_URL` tidak di-set atau salah format
 - `JWT_SECRET` tidak di-set
 - `VERCEL=1` belum di-set (menyebabkan `app.listen()` crash di serverless)
 
 ### CORS Error di browser
+
 - Pastikan `CLIENT_ORIGIN` di backend = URL frontend exact (termasuk `https://`)
 - Redeploy backend setelah update env var
 
 ### Cookies/session tidak tersimpan
+
 - Pastikan backend dan frontend di domain yang sama, atau backend pakai `SameSite=None; Secure` di cookie config
 - Untuk cross-domain Vercel deployment, perlu update cookie settings di `auth.router.ts`
 
@@ -194,6 +199,7 @@ Cek **Vercel → Functions → Runtime Logs**. Penyebab paling umum:
 Setiap push ke branch `main` akan auto-trigger deployment di Vercel (jika auto-deploy aktif).
 
 Manual redeploy:
+
 ```bash
 git add -A
 git commit -m "feat: update fitur X"

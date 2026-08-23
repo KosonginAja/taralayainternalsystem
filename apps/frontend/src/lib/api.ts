@@ -13,7 +13,14 @@ const api = axios.create({
 });
 
 api.interceptors.response.use(
-  (res) => res,
+  (res) => {
+    // If the server returns HTML instead of JSON, it means the request hit the frontend's index.html fallback
+    // This happens in Vercel if VITE_API_URL is missing or the backend is down.
+    if (typeof res.data === 'string' && res.data.trim().startsWith('<')) {
+      return Promise.reject(new Error('API URL is misconfigured. Received HTML instead of JSON. Please check VITE_API_URL in Vercel.'));
+    }
+    return res;
+  },
   (err) => {
     if (err.response?.status === 401) {
       // Redirect to login if session expired
