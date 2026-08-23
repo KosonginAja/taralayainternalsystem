@@ -1,9 +1,0 @@
-{
-  "name": "@taralaya/worker",
-  "version": "0.0.0",
-  "private": true,
-  "scripts": {
-    "build": "tsc",
-    "dev": "tsx watch src/main.ts"
-  }
-}

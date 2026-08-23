@@ -1,0 +1,530 @@
+{
+  "project": "Taralaya OS V2",
+  "instructions_for_implementer": "Work through tasks in id order (phase then bagian). After completing a task, change its status from 'Pending' to 'Done' and set 'completed_at' to the current date. Do not skip ahead unless a task is marked optional. Refer to 01_DB_SCHEMA.md for table definitions and 02_BLUEPRINT.md for task details.",
+  "last_updated": "2026-07-24",
+  "tasks": [
+    {
+      "id": "p1-b1",
+      "phase": 1,
+      "phase_name": "Foundation",
+      "title": "Project scaffolding (FE + BE)",
+      "status": "Done",
+      "completed_at": "2026-07-18"
+    },
+    {
+      "id": "p1-b2",
+      "phase": 1,
+      "phase_name": "Foundation",
+      "title": "DB connection & Drizzle setup",
+      "status": "Done",
+      "completed_at": "2026-07-18"
+    },
+    {
+      "id": "p1-b3",
+      "phase": 1,
+      "phase_name": "Foundation",
+      "title": "Core schema migration (company_settings, clients, numbering_sequences, wallets)",
+      "status": "Done",
+      "completed_at": "2026-07-18"
+    },
+    {
+      "id": "p1-b4",
+      "phase": 1,
+      "phase_name": "Foundation",
+      "title": "Super admin auth",
+      "status": "Done",
+      "completed_at": "2026-07-18"
+    },
+    {
+      "id": "p1-b5",
+      "phase": 1,
+      "phase_name": "Foundation",
+      "title": "Company Settings module (API + UI)",
+      "status": "Done",
+      "completed_at": "2026-07-18"
+    },
+    {
+      "id": "p1-b6",
+      "phase": 1,
+      "phase_name": "Foundation",
+      "title": "Client Management module (API + UI)",
+      "status": "Done",
+      "completed_at": "2026-07-18"
+    },
+
+    {
+      "id": "p2-b1",
+      "phase": 2,
+      "phase_name": "Pricelist",
+      "title": "Pricelist schema migration (pricelist_items, packages, package_items)",
+      "status": "Done",
+      "completed_at": "2026-07-19"
+    },
+    {
+      "id": "p2-b2",
+      "phase": 2,
+      "phase_name": "Pricelist",
+      "title": "Pricelist Satuan API",
+      "status": "Done",
+      "completed_at": "2026-07-19"
+    },
+    {
+      "id": "p2-b3",
+      "phase": 2,
+      "phase_name": "Pricelist",
+      "title": "Pricelist Paket API",
+      "status": "Done",
+      "completed_at": "2026-07-19"
+    },
+    {
+      "id": "p2-b4",
+      "phase": 2,
+      "phase_name": "Pricelist",
+      "title": "Pricelist Satuan UI",
+      "status": "Done",
+      "completed_at": "2026-07-19"
+    },
+    {
+      "id": "p2-b5",
+      "phase": 2,
+      "phase_name": "Pricelist",
+      "title": "Pricelist Paket UI",
+      "status": "Done",
+      "completed_at": "2026-07-19"
+    },
+
+    {
+      "id": "p3-b1",
+      "phase": 3,
+      "phase_name": "Quotation",
+      "title": "Quotation schema migration (quotations, quotation_items)",
+      "status": "Done",
+      "completed_at": "2026-07-19"
+    },
+    {
+      "id": "p3-b2",
+      "phase": 3,
+      "phase_name": "Quotation",
+      "title": "Numbering logic service",
+      "status": "Done",
+      "completed_at": "2026-07-19"
+    },
+    {
+      "id": "p3-b3",
+      "phase": 3,
+      "phase_name": "Quotation",
+      "title": "Quotation CRUD API + status transitions",
+      "status": "Done",
+      "completed_at": "2026-07-19"
+    },
+    {
+      "id": "p3-b4",
+      "phase": 3,
+      "phase_name": "Quotation",
+      "title": "Quotation revision logic",
+      "status": "Done",
+      "completed_at": "2026-07-19"
+    },
+    {
+      "id": "p3-b5",
+      "phase": 3,
+      "phase_name": "Quotation",
+      "title": "Quotation Builder UI",
+      "status": "Done",
+      "completed_at": "2026-07-19"
+    },
+    {
+      "id": "p3-b6",
+      "phase": 3,
+      "phase_name": "Quotation",
+      "title": "Quotation PDF generation",
+      "status": "Done",
+      "completed_at": "2026-07-19"
+    },
+    {
+      "id": "p3-b7",
+      "phase": 3,
+      "phase_name": "Quotation",
+      "title": "Quotation list/detail UI",
+      "status": "Done",
+      "completed_at": "2026-07-19"
+    },
+
+    {
+      "id": "p4-b1",
+      "phase": 4,
+      "phase_name": "Invoice",
+      "title": "Invoice schema migration (invoices, invoice_items, invoice_installments)",
+      "status": "Done",
+      "completed_at": "2026-07-20"
+    },
+    {
+      "id": "p4-b2",
+      "phase": 4,
+      "phase_name": "Invoice",
+      "title": "Invoice creation API (from quotation or manual)",
+      "status": "Done",
+      "completed_at": "2026-07-20"
+    },
+    {
+      "id": "p4-b3",
+      "phase": 4,
+      "phase_name": "Invoice",
+      "title": "Payment terms logic (full/dp/custom installments)",
+      "status": "Done",
+      "completed_at": "2026-07-20"
+    },
+    {
+      "id": "p4-b4",
+      "phase": 4,
+      "phase_name": "Invoice",
+      "title": "Invoice Builder UI + payment terms selector",
+      "status": "Done",
+      "completed_at": "2026-07-20"
+    },
+    {
+      "id": "p4-b5",
+      "phase": 4,
+      "phase_name": "Invoice",
+      "title": "Invoice PDF generation",
+      "status": "Done",
+      "completed_at": "2026-07-20"
+    },
+    {
+      "id": "p4-b6",
+      "phase": 4,
+      "phase_name": "Invoice",
+      "title": "Invoice list/detail UI",
+      "status": "Done",
+      "completed_at": "2026-07-20"
+    },
+
+    {
+      "id": "p5-b1",
+      "phase": 5,
+      "phase_name": "Payment & Wallet",
+      "title": "Payment/wallet schema migration (payments, payment_wallet_allocations, wallet_transactions)",
+      "status": "Done",
+      "completed_at": "2026-07-20"
+    },
+    {
+      "id": "p5-b2",
+      "phase": 5,
+      "phase_name": "Payment & Wallet",
+      "title": "Record payment API + invoice/installment status recompute",
+      "status": "Done",
+      "completed_at": "2026-07-20"
+    },
+    {
+      "id": "p5-b3",
+      "phase": 5,
+      "phase_name": "Payment & Wallet",
+      "title": "Wallet allocation API (default % split, per-payment override)",
+      "status": "Done",
+      "completed_at": "2026-07-20"
+    },
+    {
+      "id": "p5-b4",
+      "phase": 5,
+      "phase_name": "Payment & Wallet",
+      "title": "Record Payment UI (modal)",
+      "status": "Done",
+      "completed_at": "2026-07-20"
+    },
+    {
+      "id": "p5-b5",
+      "phase": 5,
+      "phase_name": "Payment & Wallet",
+      "title": "Wallet dashboard UI (balances + ledger)",
+      "status": "Done",
+      "completed_at": "2026-07-20"
+    },
+
+    {
+      "id": "p6-b1",
+      "phase": 6,
+      "phase_name": "Polish & Deploy",
+      "title": "Numbering config UI",
+      "status": "Done",
+      "completed_at": "2026-07-24"
+    },
+    {
+      "id": "p6-b2",
+      "phase": 6,
+      "phase_name": "Polish & Deploy",
+      "title": "Overview dashboard",
+      "status": "Done",
+      "completed_at": "2026-07-24"
+    },
+    {
+      "id": "p6-b3",
+      "phase": 6,
+      "phase_name": "Polish & Deploy",
+      "title": "Validation & error handling pass",
+      "status": "Done",
+      "completed_at": "2026-07-24"
+    },
+    {
+      "id": "p6-b4",
+      "phase": 6,
+      "phase_name": "Polish & Deploy",
+      "title": "Deployment preparation & build verification",
+      "status": "Done",
+      "completed_at": "2026-07-24"
+    },
+
+    {
+      "id": "p7-b1",
+      "phase": 7,
+      "phase_name": "Project Management",
+      "title": "Project schema migration (projects, project_tasks)",
+      "status": "Done",
+      "completed_at": "2026-08-21"
+    },
+    {
+      "id": "p7-b2",
+      "phase": 7,
+      "phase_name": "Project Management",
+      "title": "Auto-create project on quotation accepted + manual creation",
+      "status": "Done",
+      "completed_at": "2026-08-21"
+    },
+    {
+      "id": "p7-b3",
+      "phase": 7,
+      "phase_name": "Project Management",
+      "title": "Project CRUD API",
+      "status": "Done",
+      "completed_at": "2026-08-21"
+    },
+    {
+      "id": "p7-b4",
+      "phase": 7,
+      "phase_name": "Project Management",
+      "title": "Project Task API",
+      "status": "Done",
+      "completed_at": "2026-08-21"
+    },
+    {
+      "id": "p7-b5",
+      "phase": 7,
+      "phase_name": "Project Management",
+      "title": "Project Kanban/List UI",
+      "status": "Done",
+      "completed_at": "2026-08-21"
+    },
+    {
+      "id": "p7-b6",
+      "phase": 7,
+      "phase_name": "Project Management",
+      "title": "Project Detail UI",
+      "status": "Done",
+      "completed_at": "2026-08-21"
+    },
+
+    {
+      "id": "p8-b1",
+      "phase": 8,
+      "phase_name": "Team & Payroll",
+      "title": "Users schema migration",
+      "status": "Done",
+      "completed_at": "2026-08-22"
+    },
+    {
+      "id": "p8-b2",
+      "phase": 8,
+      "phase_name": "Team & Payroll",
+      "title": "Multi-user auth (replaces single super-admin credential)",
+      "status": "Done",
+      "completed_at": "2026-08-22"
+    },
+    {
+      "id": "p8-b3",
+      "phase": 8,
+      "phase_name": "Team & Payroll",
+      "title": "Role-based access middleware (admin/member)",
+      "status": "Done",
+      "completed_at": "2026-08-22"
+    },
+    {
+      "id": "p8-b4",
+      "phase": 8,
+      "phase_name": "Team & Payroll",
+      "title": "Add assignee_id to project_tasks",
+      "status": "Done",
+      "completed_at": "2026-08-22"
+    },
+    {
+      "id": "p8-b5",
+      "phase": 8,
+      "phase_name": "Team & Payroll",
+      "title": "Team Management UI",
+      "status": "Done",
+      "completed_at": "2026-08-22"
+    },
+    {
+      "id": "p8-b6",
+      "phase": 8,
+      "phase_name": "Team & Payroll",
+      "title": "Payroll schema migration (payroll_entries)",
+      "status": "Done",
+      "completed_at": "2026-08-22"
+    },
+    {
+      "id": "p8-b7",
+      "phase": 8,
+      "phase_name": "Team & Payroll",
+      "title": "Payroll API (mark paid -> wallet_transaction)",
+      "status": "Done",
+      "completed_at": "2026-08-22"
+    },
+    {
+      "id": "p8-b8",
+      "phase": 8,
+      "phase_name": "Team & Payroll",
+      "title": "Payroll UI",
+      "status": "Done",
+      "completed_at": "2026-08-22"
+    },
+
+    {
+      "id": "p9-b1",
+      "phase": 9,
+      "phase_name": "Expense Tracking",
+      "title": "Expenses schema migration",
+      "status": "Done",
+      "completed_at": "2026-08-22"
+    },
+    {
+      "id": "p9-b2",
+      "phase": 9,
+      "phase_name": "Expense Tracking",
+      "title": "Expense API (CRUD + wallet_transaction on create)",
+      "status": "Done",
+      "completed_at": "2026-08-22"
+    },
+    {
+      "id": "p9-b3",
+      "phase": 9,
+      "phase_name": "Expense Tracking",
+      "title": "Expense UI",
+      "status": "Done",
+      "completed_at": "2026-08-22"
+    },
+    {
+      "id": "p9-b4",
+      "phase": 9,
+      "phase_name": "Expense Tracking",
+      "title": "Wallet dashboard update (show expense outflows)",
+      "status": "Done",
+      "completed_at": "2026-08-22"
+    },
+
+    {
+      "id": "p10-b1",
+      "phase": 10,
+      "phase_name": "CRM / Lead Pipeline",
+      "title": "leads schema migration",
+      "status": "Done",
+      "completed_at": "2026-08-22"
+    },
+    {
+      "id": "p10-b2",
+      "phase": 10,
+      "phase_name": "CRM / Lead Pipeline",
+      "title": "Lead CRUD API",
+      "status": "Done",
+      "completed_at": "2026-08-22"
+    },
+    {
+      "id": "p10-b3",
+      "phase": 10,
+      "phase_name": "CRM / Lead Pipeline",
+      "title": "Convert Lead to Quotation (link to client/quotation)",
+      "status": "Done",
+      "completed_at": "2026-08-22"
+    },
+    {
+      "id": "p10-b4",
+      "phase": 10,
+      "phase_name": "CRM / Lead Pipeline",
+      "title": "Kanban UI for Lead Pipeline",
+      "status": "Done",
+      "completed_at": "2026-08-22"
+    },
+
+    {
+      "id": "p11-b1",
+      "phase": 11,
+      "phase_name": "Reporting Dashboard",
+      "title": "Revenue & profit reporting API",
+      "status": "Done",
+      "completed_at": "2026-08-24"
+    },
+    {
+      "id": "p11-b2",
+      "phase": 11,
+      "phase_name": "Reporting Dashboard",
+      "title": "Project completion reporting API",
+      "status": "Done",
+      "completed_at": "2026-08-24"
+    },
+    {
+      "id": "p11-b3",
+      "phase": 11,
+      "phase_name": "Reporting Dashboard",
+      "title": "Cash flow overview API",
+      "status": "Done",
+      "completed_at": "2026-08-24"
+    },
+    {
+      "id": "p11-b4",
+      "phase": 11,
+      "phase_name": "Reporting Dashboard",
+      "title": "Reporting Dashboard UI",
+      "status": "Done",
+      "completed_at": "2026-08-24"
+    },
+
+    {
+      "id": "p12-b1",
+      "phase": 12,
+      "phase_name": "Document Generator",
+      "title": "Document templates schema migration",
+      "status": "Done",
+      "completed_at": "2026-08-21"
+    },
+    {
+      "id": "p12-b2",
+      "phase": 12,
+      "phase_name": "Document Generator",
+      "title": "Template CRUD API + placeholder engine",
+      "status": "Done",
+      "completed_at": "2026-08-21"
+    },
+    {
+      "id": "p12-b3",
+      "phase": 12,
+      "phase_name": "Document Generator",
+      "title": "Document generation endpoint (on-demand PDF)",
+      "status": "Done",
+      "completed_at": "2026-08-21"
+    },
+    {
+      "id": "p12-b4",
+      "phase": 12,
+      "phase_name": "Document Generator",
+      "title": "Template Editor UI",
+      "status": "Done",
+      "completed_at": "2026-08-21"
+    },
+    {
+      "id": "p12-b5",
+      "phase": 12,
+      "phase_name": "Document Generator",
+      "title": "\"Generate document\" action on detail pages",
+      "status": "Done",
+      "completed_at": "2026-08-21"
+    }
+  ]
+}
