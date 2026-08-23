@@ -12,8 +12,17 @@ import { z } from 'zod';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const uploadsDir = path.join(__dirname, '..', '..', '..', 'uploads');
-if (!fs.existsSync(uploadsDir)) fs.mkdirSync(uploadsDir, { recursive: true });
+// In Vercel, the filesystem is read-only except for /tmp.
+const isVercel = process.env.VERCEL === '1';
+const uploadsDir = isVercel
+  ? path.join('/tmp', 'uploads')
+  : path.join(__dirname, '..', '..', '..', 'uploads');
+
+try {
+  if (!fs.existsSync(uploadsDir)) fs.mkdirSync(uploadsDir, { recursive: true });
+} catch (err) {
+  console.warn('Could not create uploads directory (expected in read-only serverless env):', err);
+}
 
 const storage = multer.diskStorage({
   destination: (_req, _file, cb) => cb(null, uploadsDir),
